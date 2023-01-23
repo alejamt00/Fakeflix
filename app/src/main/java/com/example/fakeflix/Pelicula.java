@@ -1,6 +1,9 @@
 package com.example.fakeflix;
 
+import android.widget.ImageView;
+
 public class Pelicula {
     private String nombre;
-    private 
+    private ImageView ivPelicula;
+    private String urlTrailer;
 }
