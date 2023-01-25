@@ -1,46 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-
-    <ImageView
-        android:id="@+id/ivPeliculaItem"
-        android:layout_width="196dp"
-        android:layout_height="match_parent"
-        android:layout_weight="0"
-        app:srcCompat="@drawable/ic_launcher_background" />
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <Space
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="11dp"
         android:layout_weight="0" />
 
     <LinearLayout
-        android:layout_width="212dp"
-        android:layout_height="109dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="0"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/tituloPeliculaRow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:text="placeholderTitle"
-            android:textStyle="bold" />
+        android:orientation="horizontal">
 
         <Space
-            android:layout_width="match_parent"
-            android:layout_height="5dp"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
             android:layout_weight="0" />
 
-        <TextView
-            android:id="@+id/infoPeliculaRow"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="placeholderInfo" />
+        <ImageView
+            android:id="@+id/ivPeliculaItem"
+            android:layout_width="176dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            app:srcCompat="@drawable/ic_launcher_background"
+            tools:ignore="ImageContrastCheck" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0" />
+
+        <LinearLayout
+            android:layout_width="204dp"
+            android:layout_height="109dp"
+            android:layout_weight="0"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tituloPeliculaRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="placeholderTitle"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_weight="0" />
+
+            <TextView
+                android:id="@+id/infoPeliculaRow"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="placeholderInfo" />
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

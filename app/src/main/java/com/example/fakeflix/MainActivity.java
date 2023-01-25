@@ -14,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ListaPeliculasFragment listaFragment = new ListaPeliculasFragment();
-        ft.add(R.id.fragmentContainerView,listaFragment).commit();
+        //FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        //ListaPeliculasFragment listaFragment = new ListaPeliculasFragment();
+        //ft.add(R.id.fragmentContainerView,listaFragment).commit();
     }
 }

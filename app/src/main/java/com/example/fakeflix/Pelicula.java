@@ -1,16 +1,18 @@
 package com.example.fakeflix;
 
+import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
 
 public class Pelicula {
     private String nombre;
     private String info;
-    private ImageView ivPelicula;
+    private int idPortada;
     private String urlTrailer;
 
-    public Pelicula(String nombre, ImageView ivPelicula, String urlTrailer) {
+    public Pelicula(String nombre, String info, int idPortada, String urlTrailer) {
         this.nombre = nombre;
-        this.ivPelicula = ivPelicula;
+        this.info = info;
+        this.idPortada = idPortada;
         this.urlTrailer = urlTrailer;
     }
 
@@ -18,8 +20,10 @@ public class Pelicula {
         return nombre;
     }
 
-    public ImageView getIvPelicula() {
-        return ivPelicula;
+    public String getInfo() { return info; }
+
+    public int getidPortada() {
+        return idPortada;
     }
 
     public String getUrlTrailer() {
@@ -30,8 +34,10 @@ public class Pelicula {
         this.nombre = nombre;
     }
 
-    public void setIvPelicula(ImageView ivPelicula) {
-        this.ivPelicula = ivPelicula;
+    public void setInfo(String info) { this.info = info; }
+
+    public void setIdPortada(int idPortada) {
+        this.idPortada = idPortada;
     }
 
     public void setUrlTrailer(String urlTrailer) {
