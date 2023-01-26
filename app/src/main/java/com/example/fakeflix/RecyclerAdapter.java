@@ -1,5 +1,6 @@
 package com.example.fakeflix;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -18,12 +21,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     private ArrayList<Pelicula> listaPeliculas;
     private LayoutInflater lInflater;
     private Context context;
+    private FragmentTransaction ft;
 
 
-    public RecyclerAdapter(ArrayList<Pelicula> listaPeliculas, Context context){
+    public RecyclerAdapter(ArrayList<Pelicula> listaPeliculas, Context context, FragmentTransaction ft){
         this.lInflater = LayoutInflater.from(context);
-        this.context = context;
         this.listaPeliculas = listaPeliculas;
+        this.ft = ft;
     }
 
     @NonNull
@@ -34,8 +38,16 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.bindData(listaPeliculas.get(position));
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DetallesPelicula dp = new DetallesPelicula(listaPeliculas.get(position).getNombre(),listaPeliculas.get(position).getInfo(),listaPeliculas.get(position).getUrlTrailer());
+                ft.replace(R.id.fragmentContainerView,dp).commit();
+                ft.addToBackStack(null);
+            }
+        });
     }
 
     @Override
