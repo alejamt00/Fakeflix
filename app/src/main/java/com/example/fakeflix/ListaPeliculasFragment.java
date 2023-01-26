@@ -75,8 +75,20 @@ public class ListaPeliculasFragment extends Fragment {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(view.getContext());
         recyclerPeliculas.setLayoutManager(linearLayoutManager);
 
-        Pelicula p1 = new Pelicula("El señor de los anillos","En verda wanalberto",R.drawable.lotr , "test.com");
+
+        Pelicula p1 = new Pelicula("El Señor de los Anillos","Disfruta de la trilogía original de \"El señor de los anillos\" de Peter Jackson.",R.drawable.lotr , "test.com");
         listaPeliculas.add(p1);
+        Pelicula p2 = new Pelicula("Killer Bean", "Se desarrolla en un mundo de granos de café, concretamente de uno llamado Jack Bean.", R.drawable.killer_bean,"test.com");
+        listaPeliculas.add(p2);
+        Pelicula p3 = new Pelicula("Jagger Royale", "Todos los personajes míticos de Mister Jägger se enfrentarán en un combate a muerte. Sólo puede quedar uno.", R.drawable.jagger_royale,"test.com");
+        listaPeliculas.add(p3);
+        Pelicula p4 = new Pelicula("Minions: The Rise of Gru", "Pélicula precuela de la famosa saga \"Gru mi villano favorito\".",R.drawable.minions, "test.com");
+        listaPeliculas.add(p4);
+        Pelicula p5 = new Pelicula("Feel Good Man", "Documental de la famosa rana meme llamada \"Pepe\".",R.drawable.pepelore,"test.com");
+        listaPeliculas.add(p5);
+        Pelicula p6 = new Pelicula("Operación ISAM", "Pelicula documental de los hechos acontecidos entre IlloJuan, LMDShow y \"El novio de Masi\".",R.drawable.op_isam,"test.com");
+        listaPeliculas.add(p6);
+
 
 
         FragmentTransaction ft = getParentFragmentManager().beginTransaction();

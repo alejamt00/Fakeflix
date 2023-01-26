@@ -2,18 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#000000"
     android:orientation="vertical">
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="11dp"
+        android:layout_height="5dp"
         android:layout_weight="0" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="123dp"
         android:layout_weight="0"
         android:orientation="horizontal">
 
@@ -24,20 +25,23 @@
 
         <ImageView
             android:id="@+id/ivPeliculaItem"
-            android:layout_width="176dp"
-            android:layout_height="match_parent"
+            android:layout_width="170dp"
+            android:layout_height="123dp"
             android:layout_weight="0"
+            android:contentDescription="Carátula de la película"
+            android:rotation="0"
+            android:rotationY="0"
             app:srcCompat="@drawable/ic_launcher_background"
             tools:ignore="ImageContrastCheck" />
 
         <Space
-            android:layout_width="20dp"
+            android:layout_width="10dp"
             android:layout_height="wrap_content"
             android:layout_weight="0" />
 
         <LinearLayout
-            android:layout_width="204dp"
-            android:layout_height="109dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="0"
             android:orientation="vertical">
 
@@ -47,6 +51,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
                 android:text="placeholderTitle"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <Space
@@ -57,9 +63,12 @@
             <TextView
                 android:id="@+id/infoPeliculaRow"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:text="placeholderInfo" />
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="placeholderInfo"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/white" />
+
         </LinearLayout>
     </LinearLayout>
 
