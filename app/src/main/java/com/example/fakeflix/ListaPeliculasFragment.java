@@ -77,6 +77,10 @@ public class ListaPeliculasFragment extends Fragment {
         listaPeliculas.add(p6);
         Pelicula p7 = new Pelicula("14 Días: Never Zurrender", "Tras los hechos acotencidos en la Operación ISAM, se desató una guerra viral zombie. Solo quedan 14 días antes del fin.",R.drawable.catorce_dias,"https://www.youtube.com/embed/Its355mzxJo");
         listaPeliculas.add(p7);
+        Pelicula p9 = new Pelicula("M̷̡̞̮̺͔̭͓͊͑͂̂̊ͅͅa̴͕͗̽́̋̇͠͝ț̶̰͔̝͒͗͗͘͠r̴̟͈̞͗̈́́̌́̈i̶̢̱̼̖͎̜̜͋̍̈́͒̅̅̎̅͘x̵͙̰̫͖̥̱͑̕͝","?x?????i???????r????t????a????m????????????",R.drawable.matrix,"https://rezmason.github.io/matrix/");
+        listaPeliculas.add(p9);
+        Pelicula p8 = new Pelicula("Project Penguin", "4 pingüinos están preparados para cualquier cosa con tal de salvar el mundo.", R.drawable.penguin,"https://www.youtube.com/embed/snOpRK4MNc4");
+        listaPeliculas.add(p8);
 
         FragmentTransaction ft = getParentFragmentManager().beginTransaction();
 
