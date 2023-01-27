@@ -88,7 +88,7 @@ public class ListaPeliculasFragment extends Fragment {
         recyclerPeliculas.setAdapter(recyclerAdapter);
 
         sv = view.findViewById(R.id.searchView);
-        sv.setIconified(false);
+        sv.setIconifiedByDefault(false);
         sv.clearFocus();
         sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
