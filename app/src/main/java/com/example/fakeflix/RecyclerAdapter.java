@@ -22,12 +22,31 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     private LayoutInflater lInflater;
     private Context context;
     private FragmentTransaction ft;
+    private ArrayList<Pelicula> listaOriginal;
+
 
 
     public RecyclerAdapter(ArrayList<Pelicula> listaPeliculas, Context context, FragmentTransaction ft){
         this.lInflater = LayoutInflater.from(context);
         this.listaPeliculas = listaPeliculas;
+        this.listaOriginal = new ArrayList<Pelicula>();
+        this.listaOriginal.addAll(listaPeliculas);
         this.ft = ft;
+    }
+
+    public void filtro(String txt){
+        if(txt.length()==0){
+            listaPeliculas.clear();
+            listaPeliculas.addAll(listaOriginal);
+        } else {
+            listaPeliculas.clear();
+            for (Pelicula p: listaOriginal) {
+                if (p.getNombre().toLowerCase().contains(txt.toLowerCase())){
+                    listaPeliculas.add(p);
+                }
+            }
+        }
+        notifyDataSetChanged();
     }
 
     @NonNull

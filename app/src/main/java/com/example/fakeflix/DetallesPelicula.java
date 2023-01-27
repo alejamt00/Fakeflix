@@ -61,6 +61,7 @@ public class DetallesPelicula extends Fragment {
         WebView wvTrailer = view.findViewById(R.id.trailerWebView);
         GifImageView gif = view.findViewById(R.id.loadGif);
 
+
         tvNombre.setText(nom);
         tvInfo.setText(info);
         wvTrailer.getSettings().setJavaScriptEnabled(true);

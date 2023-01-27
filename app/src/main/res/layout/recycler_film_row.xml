@@ -67,7 +67,8 @@
                 android:layout_weight="0"
                 android:text="placeholderInfo"
                 android:textAlignment="viewStart"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="13sp" />
 
         </LinearLayout>
     </LinearLayout>

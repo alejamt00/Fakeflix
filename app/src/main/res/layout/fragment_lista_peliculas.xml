@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/bg_round"
         android:commitIcon="?android:attr/actionModeWebSearchDrawable"
-        android:paddingStart="5dp" />
+         />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewListaPeliculas"
