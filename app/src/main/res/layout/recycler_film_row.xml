@@ -21,14 +21,15 @@
         <Space
             android:layout_width="10dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0" />
+            android:layout_weight="0"
+            tools:ignore="NestedWeights" />
 
         <ImageView
             android:id="@+id/ivPeliculaItem"
             android:layout_width="170dp"
             android:layout_height="123dp"
             android:layout_weight="0"
-            android:contentDescription="Carátula de la película"
+            android:contentDescription="@string/car_tula_de_la_pel_cula"
             android:rotation="0"
             android:rotationY="0"
             app:srcCompat="@drawable/ic_launcher_background"
@@ -50,7 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:text="placeholderTitle"
+                android:text="@string/placeholdertitle"
                 android:textColor="@android:color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -65,7 +66,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:text="placeholderInfo"
+                android:text="@string/placeholderinfo"
                 android:textAlignment="viewStart"
                 android:textColor="@android:color/white"
                 android:textSize="13sp" />

@@ -5,6 +5,11 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
+/*
+   Clase MainActivity
+   Clase de la ventana principal, el oncreate solo setea su layout, el cual incluye un fragmentcontainer
+   con un fragmente seteado por xml.
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -12,10 +17,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Para ocultar barra superior
         getSupportActionBar().hide();
 
-        //FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        //ListaPeliculasFragment listaFragment = new ListaPeliculasFragment();
-        //ft.add(R.id.fragmentContainerView,listaFragment).commit();
     }
 }

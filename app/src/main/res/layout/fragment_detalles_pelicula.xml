@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:text="placeholderTitle"
+        android:text="@string/placeholdertitle"
         android:textAlignment="center"
         android:textColor="#ff0011"
         android:textSize="24sp"
@@ -35,7 +35,7 @@
         android:layout_width="334dp"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:text="placeholderInfo"
+        android:text="@string/placeholderinfo"
         android:textAlignment="center"
         android:textColor="#FFFFFF" />
 

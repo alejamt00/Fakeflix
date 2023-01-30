@@ -16,9 +16,9 @@ import org.w3c.dom.Text;
 import pl.droidsonroids.gif.GifImageView;
 
 /**
- * A simple {@link Fragment} subclass.
- * Use the {@link DetallesPelicula#newInstance} factory method to
- * create an instance of this fragment.
+ * Clase DetallesPelicula
+ * Fragmento que se lanza al hacer click a una película de la lista en el otro fragmento (ListaPeliculasFragment)
+ * que muestra su información y trailer.
  */
 public class DetallesPelicula extends Fragment {
 
@@ -26,31 +26,39 @@ public class DetallesPelicula extends Fragment {
     private String info;
     private String trailer;
 
+    /*
+        Constructor de clase parametrizado con la info de la peli seleccionada.
+     */
     public DetallesPelicula(String nom, String info, String trailer) {
         this.nom = nom;
         this.info = info;
         this.trailer = trailer;
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @return A new instance of fragment DetallesPelicula.
+    /*
+        Constructor de clase que llama al anterior, no utlizado en este caso pero sería funcional,
+        simplemente llama al constructor parametrizado.
      */
-    // TODO: Rename and change types and number of parameters
     public static DetallesPelicula newInstance(String nom, String info, String trailer) {
         DetallesPelicula fragment = new DetallesPelicula(nom,info,trailer);
 
         return fragment;
     }
 
+    /*
+        Método llamado al crearse el fragmento.
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
     }
 
+    /*
+        Método llamado tras el onCreate.
+        Infla el layout del fragmento, vincula variables con su id de resource y sete textos variables
+        pasadas por el constructor (nombre, informacion y link de trailer)
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
